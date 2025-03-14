@@ -6,12 +6,13 @@ response, and close the resource manager.
 
 import sys
 from aqvisa import AqVISALibrary
+from aqvisa.apptype import AppType
 
 # Initialize the AqVISALibrary
 manager = AqVISALibrary()
 
 # Select the application type
-success = manager.viSelectAppType(3)
+success = manager.viSelectAppType(AppType.MIXEDSIGNALOSCILLOSCOPE)
 
 if not success:
     print(f"viSelectAppType failed: {success}")
@@ -24,13 +25,14 @@ if not success:
     sys.exit(1)
 
 # Write the command *IDN?
+print("viWrite *IDN?")
 success = manager.viWrite(b"*IDN?")
 if not success:
     print(f"viWrite failed, error code: {manager.viErrCode()}")
 
 # Read the response
 string = manager.viRead(1024)
-print(f"viRead: {string}")
+print(f"viRead Response: {string}")
 
 # Close the resource manager
 _ = manager.viCloseRM()
