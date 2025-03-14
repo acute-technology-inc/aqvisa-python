@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aqvisa"
+version = "0.0.1"
+description = "Acute VISA Library"
+authors = [
+    { name = "Acute Technology Inc.", email = "sdk@acute.com.tw" },
+    { name = "Eric Tsai", email = "erictsai@acute.com.tw" },
+]
+urls = { "Homepage" = "https://github.com/aqvisa-python" }
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Topic :: Software Development",
+    "License :: OSI Approved :: BSD License",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[tool.setuptools.packages.find]
+where = ["aqvisa"]
+include = ["aqvisa*"]
+namespaces = false
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+log_cli = true
+log_cli_level = "INFO"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+respect-gitignore = true
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "I",  # isort
+]
+ignore = ["E501", "B006", "E731", "A002", "E203"]
+
+exclude = [
+    ".git",
+    "__pycache__",
+    "benchmark_internal/others",
+    ".venv",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.isort]
+known-first-party = ["aqvisa"]
+force-single-line = true
+lines-between-types = 1
