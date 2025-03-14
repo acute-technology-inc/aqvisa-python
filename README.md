@@ -5,7 +5,7 @@
 AqVISA offers an intuitive interface for seamless management of controlling our applications. This Python package providing higher level management to AqVISA libraries.
 
 - [Installation](Installation)
-- [Example](Examples)
+- [Examples](Examples)
 
 ## Installation
 
