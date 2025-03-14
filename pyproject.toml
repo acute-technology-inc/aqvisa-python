@@ -10,7 +10,7 @@ authors = [
     { name = "Acute Technology Inc.", email = "sdk@acute.com.tw" },
     { name = "Eric Tsai", email = "erictsai@acute.com.tw" },
 ]
-urls = { "Homepage" = "https://github.com/aqvisa-python" }
+urls = { "Homepage" = "https://github.com/acute-technology-inc/aqvisa-python" }
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
