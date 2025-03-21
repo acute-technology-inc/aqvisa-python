@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aqvisa"
-version = "0.0.1"
+version = "0.0.2"
 description = "Acute VISA Library"
 authors = [
     { name = "Acute Technology Inc.", email = "sdk@acute.com.tw" },
