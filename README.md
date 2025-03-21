@@ -38,3 +38,15 @@ Acute VISA (AqVISA) offers an intuitive interface for seamless management of con
 | **Use Case** | **Description** |
 | ------------ | --------------- |
 | [Basic Write / Read](https://github.com/acute-technology-inc/aqvisa-python/blob/main/examples/helloworld.py) | Demonstrates basic usage | 
+
+## FAQ
+
+### Library AqVISA64 not found
+
+If you encounter the following error:
+
+```
+FileNotFoundError: Library AqVISA64 not found
+```
+
+This means that the dynamic library is not installed. Please refer to the [installation page](https://www.acute.com.tw/en/sdkDLL) to download the installer.
