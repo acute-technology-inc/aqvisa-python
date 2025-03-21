@@ -1,9 +1,9 @@
-<h1 align=center>AqVISA Library</h1>
+<h1 align=center>Acute VISA Python Package</h1>
 
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![PyPI](https://img.shields.io/pypi/v/aqvisa?label=pypi%20package)](https://pypi.org/project/aqvisa/)
 
-AqVISA offers an intuitive interface for seamless management of controlling our applications. This Python package providing higher level management to AqVISA libraries.
+Acute VISA (AqVISA) offers an intuitive interface for seamless management of controlling our applications. This Python package providing higher level management to AqVISA library.
 
 - Acute official website: https://www.acute.com.tw/en/
 - Acute software download: https://www.acute.com.tw/en/install
