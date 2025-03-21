@@ -19,5 +19,8 @@ class AppType(IntEnum):
     # TravelBus Application
     TRAVELBUS = 2
 
-    # Mixed Signal Oscilloscope Application
+    # Mixed Signal Oscilloscope (MSO) Application
     MIXEDSIGNALOSCILLOSCOPE = 3
+
+    # Digital Storage Oscilloscope (DSO) Application
+    DIGTIALSTORAGEOSCILLOSCOPE = 101
