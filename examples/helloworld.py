@@ -26,12 +26,12 @@ if not success:
 
 # Write the command *IDN?
 print("viWrite *IDN?")
-success = manager.viWrite(b"*IDN?")
+success = manager.viWrite(command=b"*IDN?")
 if not success:
     print(f"viWrite failed, error code: {manager.viErrCode()}")
 
 # Read the response
-string = manager.viRead(1024)
+string = manager.viRead(count=1024)
 print(f"viRead Response: {string}")
 
 # Close the resource manager
