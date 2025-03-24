@@ -1,5 +1,6 @@
 """
-This module contains the application type for the AqVISA library.
+This module defines the supported application type of Acute's application
+for the AqVISA library.
 """
 
 from enum import IntEnum
@@ -7,7 +8,7 @@ from enum import IntEnum
 
 class AppType(IntEnum):
     """
-    This enum contains the application type for the AqVISA library.
+    This enum defines the supported application type of Acute's application.
     """
 
     # TravelLogic Application

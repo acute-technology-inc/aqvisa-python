@@ -11,9 +11,6 @@ from aqvisa.utils.ctypes_wrapper import C_DLL
 class AqLibrary:
     """
     This is a wrapper for the AqLibrary class.
-
-    Args:
-        object (_type_): _description_
     """
     def __init__(self, libname: str) -> None:
         self.libname = libname
@@ -38,7 +35,7 @@ class AqLibrary:
                 restype: Optional[Any] = None,
                 argstype: Optional[List[Any]] = None) -> None:
         """
-        This function maps the API to the C API.
+        This function maps the python APIs to the C APIs.
         """
         try:
             c_api = getattr(self._dll, c_api_name)

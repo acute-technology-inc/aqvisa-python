@@ -6,33 +6,37 @@ response, and close the resource manager.
 
 import sys
 from aqvisa import AqVISALibrary
-from aqvisa.apptype import AppType
+from aqvisa import AppType
 
 # Initialize the AqVISALibrary
 manager = AqVISALibrary()
 
 # Select the application type
-success = manager.viSelectAppType(AppType.MIXEDSIGNALOSCILLOSCOPE)
+success = manager.select_app_type(AppType.MIXEDSIGNALOSCILLOSCOPE)
 
 if not success:
     print(f"viSelectAppType failed: {success}")
     sys.exit(1)
 
-# Open the resource manager
-success = manager.viOpenRM()
+# Connect to the selected application
+success = manager.open()
 if not success:
     print(f"viOpenRM failed: {success}")
     sys.exit(1)
 
-# Write the command *IDN?
+# Send the command `*IDN?` to the application
 print("viWrite *IDN?")
-success = manager.viWrite(command=b"*IDN?")
+success = manager.write(command=b"*IDN?")
 if not success:
-    print(f"viWrite failed, error code: {manager.viErrCode()}")
+    print(f"viWrite failed, error code: {manager.get_status_code()}")
 
 # Read the response
-string = manager.viRead(count=1024)
-print(f"viRead Response: {string}")
+# The response of `*IDN?` command is like
+# Model: <Model Name>, Serial No.: <Device Serial Number>;
+# If the application is in demo mode, the response will be like
+# Model: Demo, Serial No.: Demo;
+response = manager.read(count=1024)
+print(f"viRead Response: {response}")
 
-# Close the resource manager
-_ = manager.viCloseRM()
+# Disconnect from the application
+_ = manager.close()
