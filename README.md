@@ -14,7 +14,8 @@ Acute VISA (AqVISA) offers an intuitive interface for seamless management of con
 
 - Run the installer.
 
-    Please refer to the [installation page](https://www.acute.com.tw/en/sdkDLL) to download the installer.
+    Please refer to the [installation page](https://www.acute.com.tw/en/sdkDLL) to download the installer. The installer
+    is named as `aqvisa-installer-<version>.exe`.
     
     By default, the installer will install the dynamic library and the dependency libraries to the following directory:
     ```
